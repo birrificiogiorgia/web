@@ -8,10 +8,10 @@ const CONTATTI = {
   telefono: "+393701012155",
   telefonoVisibile: "370 101 2155",
   whatsapp: "393701012155",
-  instagram: "https://www.instagram.com/giorgia_birrificio_pizzeria/",
-  tiktok: "https://www.tiktok.com/@giorgia_birrificio_pizzeria",
-  facebook: "",   // incolla qui il link della pagina Facebook
-  maps: "https://www.google.com/maps/search/?api=1&query=Birrificio+Giorgia+Ariano+Irpino" // sostituisci con il link del vostro profilo Google
+  instagram: "https://www.instagram.com/birrificio.giorgia/",
+  tiktok: "https://tiktok.com/@birrificiogiorgia",
+  facebook: "https://www.facebook.com/pizzeria.giorgia/",
+  maps: "https://www.google.com/maps/search/?api=1&query=Birrificio+Giorgia+Ariano+Irpino"
 };
 
 /* BIRRE
