@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Giorgia – Birrificio artigianale e pizzeria ad Ariano Irpino</title>
+<meta name="description" content="Birrificio artigianale Giorgia ad Ariano Irpino (AV), dal 2011. Birre prodotte da noi, alla spina e in fusti per eventi e locali. Pizzeria, pinse romane e panuozzi.">
+<meta property="og:title" content="Giorgia – Birrificio artigianale ad Ariano Irpino">
+<meta property="og:description" content="Birra fatta da noi dal 2011. Alla spina, in fusti per le tue feste e con la nostra pizza.">
+<meta property="og:image" content="assets/img/sala-cotta-1600.webp">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#120D09">
+<link rel="icon" type="image/png" href="assets/icon-180.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["Brewery","Restaurant"],"name":"Giorgia – Birrificio artigianale e pizzeria",
+ "servesCuisine":["Pizza","Italiana"],"telephone":"+39 370 1012155","url":"https://www.birrificiogiorgia.it",
+ "hasMenu":"https://www.birrificiogiorgia.it/menu.html","foundingDate":"2011",
+ "address":{"@type":"PostalAddress","addressLocality":"Ariano Irpino","addressRegion":"AV","addressCountry":"IT"},
+ "sameAs":["https://www.instagram.com/giorgia_birrificio_pizzeria/"]}
+</script>
+<style>
+/* ---------- scena 1: il video che si allarga ---------- */
+.hero{height:280vh;position:relative}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero-video{position:absolute;inset:0;will-change:clip-path}
+.hero-video video,.hero-video img{width:100%;height:100%;object-fit:cover;transform:scale(var(--vs,1.12))}
+.hero-video::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 100%,rgba(18,13,9,.75),rgba(18,13,9,0) 60%);opacity:var(--shade,0)}
+.hero-top{position:absolute;left:0;right:0;top:0;padding:calc(env(safe-area-inset-top,0px) + 92px) 22px 0;text-align:center;will-change:transform,opacity}
+.hero-top .wm{width:min(460px,72vw);margin:0 auto 18px;height:auto}
+.hero-top p{font-size:clamp(1.05rem,2.4vw,1.35rem);color:rgba(244,235,220,.85);margin:0 auto 22px;max-width:30ch}
+.hero-top .cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.hero-say{position:absolute;left:0;right:0;bottom:12vh;text-align:center;padding:0 22px;opacity:0;will-change:transform,opacity}
+.hero-say h2{font-size:clamp(2.6rem,8.5vw,7rem);line-height:.95;letter-spacing:-.035em;font-weight:800;margin:0}
+.hero-say p{font-size:clamp(1.05rem,2.2vw,1.4rem);margin:16px auto 0;max-width:34ch;color:rgba(244,235,220,.88)}
+.scroll-hint{position:absolute;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);font-size:.8rem;color:var(--muted);opacity:var(--hint,1)}
+
+/* ---------- scena 2: frase che si illumina ---------- */
+.manifesto{height:220vh;position:relative}
+.manifesto .stage{display:grid;place-items:center}
+.manifesto p{font-size:clamp(1.9rem,5.2vw,4.1rem);line-height:1.12;letter-spacing:-.025em;font-weight:700;max-width:22ch;margin:0 auto;padding:0 22px;text-align:center}
+.manifesto .w{opacity:.14;transition:opacity .25s linear}
+.manifesto .w.on{opacity:1}
+
+/* ---------- scena 3: dal chicco al bicchiere ---------- */
+.process{height:520vh;position:relative}
+.process .layer{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.process .layer.on{opacity:1}
+.process .layer img{width:100%;height:100%;object-fit:cover;transform:scale(var(--s,1.18));will-change:transform}
+.process .stage::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(18,13,9,.85) 0%,rgba(18,13,9,0) 26%,rgba(18,13,9,0) 45%,rgba(18,13,9,.92) 100%)}
+.process .head{position:absolute;z-index:2;top:calc(env(safe-area-inset-top,0px) + 80px);left:0;right:0;text-align:center;padding:0 22px}
+.process .head h2{font-size:clamp(1.9rem,4.6vw,3.4rem);letter-spacing:-.03em;font-weight:800;margin:0;line-height:1}
+.steps{position:absolute;z-index:2;left:0;right:0;max-width:1160px;margin:0 auto;bottom:calc(env(safe-area-inset-bottom,0px) + 48px)}
+.step{position:absolute;left:22px;right:22px;bottom:0;opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease}
+.step.on{opacity:1;transform:none}
+.step .n{font-size:.95rem;color:var(--gold-2);font-weight:600;margin-bottom:6px}
+.step h3{font-size:clamp(2.2rem,6vw,4.6rem);line-height:.95;letter-spacing:-.035em;font-weight:800;margin:0 0 12px}
+.step p{margin:0;max-width:40ch;font-size:clamp(1rem,1.8vw,1.2rem);color:rgba(244,235,220,.88)}
+.bars{position:absolute;z-index:2;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 22px)}
+.bars .wrap{display:flex;gap:6px}
+.bars i{flex:1;height:3px;border-radius:3px;background:rgba(244,235,220,.2);overflow:hidden}
+.bars i b{display:block;height:100%;width:calc(var(--f,0)*100%);background:var(--gold)}
+
+/* ---------- sezioni standard ---------- */
+.sec{padding:120px 0}
+.sec-head{text-align:center;margin:0 auto 56px;max-width:760px;padding:0 22px}
+.sec-head h2{font-size:clamp(2.4rem,6.2vw,4.8rem);line-height:.98;letter-spacing:-.04em;font-weight:800;margin:0 0 16px}
+.sec-head p{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);margin:0 auto;max-width:44ch}
+
+/* ---------- le birre ---------- */
+.beers{perspective:1400px}
+.rail{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;transform-origin:50% 0;will-change:transform;
+  transform:rotateX(calc(var(--t,1)*22deg)) translateY(calc(var(--t,1)*90px)) scale(calc(1 - var(--t,1)*.08));opacity:calc(1 - var(--t,1)*.6)}
+@media (max-width:1000px){
+  .rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px 20px;gap:14px;scrollbar-width:none}
+  .rail::-webkit-scrollbar{display:none}
+  .beer{flex:0 0 min(82vw,340px);scroll-snap-align:center}
+}
+.beer{position:relative;border-radius:var(--r-lg);padding:30px 26px 26px;overflow:hidden;min-height:620px;display:flex;flex-direction:column;
+  background:radial-gradient(120% 70% at 50% 20%,color-mix(in srgb,var(--c) 34%,transparent),transparent 70%),var(--malt);
+  box-shadow:inset 0 0 0 1px var(--line)}
+.beer .g{width:62%;max-width:190px;margin:4px auto 18px}
+.beer h3{font-size:2.3rem;letter-spacing:-.03em;font-weight:800;margin:0;line-height:1;text-align:center}
+.beer .style{color:var(--muted);text-align:center;margin:8px 0 0;font-size:.95rem}
+.beer .short{text-align:center;font-size:1.15rem;font-weight:600;margin:16px 0 0}
+.beer .abv{display:flex;justify-content:center;gap:24px;margin:20px 0;padding:16px 0;border-block:1px solid var(--line);text-align:center}
+.beer .abv b{display:block;font-size:1.6rem;font-weight:700;letter-spacing:-.02em;line-height:1}
+.beer .abv span{font-size:.78rem;color:var(--muted)}
+.beer .pair{font-size:.92rem;color:var(--muted);margin:0 0 18px;text-align:center}
+.beer .pair strong{color:var(--cream);font-weight:600}
+.beer .foot{margin-top:auto;display:flex;justify-content:center}
+.beer details{width:100%}
+.beer summary{list-style:none;cursor:pointer;text-align:center}
+.beer summary::-webkit-details-marker{display:none}
+.beer summary .btn{pointer-events:none}
+.beer .prices{margin-top:14px;font-size:.95rem}
+.beer .prices div{display:flex;justify-content:space-between;padding:6px 2px;border-bottom:1px solid var(--line)}
+.beer .prices span:last-child{font-variant-numeric:tabular-nums}
+.beer .ask{color:var(--muted);font-size:.92rem;text-align:center}
+
+/* ---------- bento pizzeria ---------- */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.tile{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:440px;background:var(--malt);isolation:isolate}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(var(--z,1.14));will-change:transform}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,13,9,.8) 0%,rgba(18,13,9,.1) 45%,rgba(18,13,9,0) 70%)}
+.tile .txt{padding:34px 30px;text-align:center}
+.tile h3{font-size:clamp(1.7rem,3.4vw,2.6rem);letter-spacing:-.03em;font-weight:800;line-height:1;margin:0 0 10px}
+.tile p{margin:0 auto 16px;color:rgba(244,235,220,.88);max-width:34ch}
+.t-a{grid-column:span 6;min-height:600px}
+.t-b{grid-column:span 3}
+.t-c{grid-column:span 3}
+.t-d{grid-column:span 6;min-height:520px}
+.t-d::before{background:linear-gradient(90deg,rgba(18,13,9,.9) 0%,rgba(18,13,9,.5) 45%,rgba(18,13,9,0) 75%)}
+.t-d .txt{text-align:left;max-width:520px;padding:56px 44px}
+.t-d .txt p{margin-left:0}
+.pairs{list-style:none;padding:0;margin:0 0 20px}
+.pairs li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline}
+.pairs li b{min-width:74px}
+.pairs li span{color:rgba(244,235,220,.8)}
+@media (max-width:760px){
+  .t-b,.t-c{grid-column:span 6}
+  .tile{min-height:480px}
+  .t-d::before{background:linear-gradient(180deg,rgba(18,13,9,.2),rgba(18,13,9,.92) 60%)}
+  .t-d{display:flex;align-items:flex-end}
+  .t-d .txt{padding:30px 26px}
+}
+
+/* ---------- scena 4: i fusti ---------- */
+.kegs{height:230vh;position:relative}
+.kegs .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(var(--k,1.5));filter:brightness(var(--b,.3)) sepia(.35);will-change:transform,filter}
+.kegs .say{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:0 22px}
+.kegs .say h2{font-size:clamp(2.8rem,9vw,8rem);line-height:.92;letter-spacing:-.045em;font-weight:800;margin:0;
+  opacity:var(--o,0);transform:scale(calc(1.25 - var(--o,0)*.25))}
+.kegs .say p{font-size:clamp(1.05rem,2.2vw,1.4rem);margin:18px auto 0;max-width:36ch;opacity:var(--o2,0)}
+
+.offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-10vh;position:relative;z-index:2}
+@media (max-width:900px){.offer{grid-template-columns:1fr;margin-top:0}}
+.card{border-radius:var(--r-lg);overflow:hidden;background:var(--malt);box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column}
+.card .ph{aspect-ratio:4/3;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .bd{padding:24px 26px 28px}
+.card h3{font-size:1.6rem;letter-spacing:-.02em;font-weight:700;margin:0 0 8px}
+.card p{margin:0;color:var(--muted)}
+
+.quote{position:relative;border-radius:var(--r-lg);overflow:hidden;margin-top:16px;min-height:460px;display:grid;place-items:center;text-align:center;isolation:isolate}
+.quote video,.quote img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.quote::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(18,13,9,.55)}
+.quote .in{padding:50px 24px}
+.quote h3{font-size:clamp(2rem,5vw,3.8rem);letter-spacing:-.035em;font-weight:800;line-height:1;margin:0 0 14px}
+.quote p{margin:0 auto 24px;max-width:40ch;color:rgba(244,235,220,.9);font-size:1.1rem}
+
+/* ---------- visita ---------- */
+.visit{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+@media (max-width:900px){.visit{grid-template-columns:1fr}}
+.visit .big{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:520px}
+.visit .big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(var(--z,1.14))}
+.visit .side{border-radius:var(--r-lg);background:var(--malt);box-shadow:inset 0 0 0 1px var(--line);padding:44px 38px;display:flex;flex-direction:column;justify-content:center}
+.visit .side img.logo{width:190px;margin:0 0 26px}
+.visit h3{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.035em;font-weight:800;line-height:1;margin:0 0 14px}
+.visit p{color:var(--muted);margin:0 0 20px}
+.visit .row{display:flex;gap:10px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){
+  .hero,.manifesto,.kegs{height:auto}.process{height:auto}
+  .stage{position:relative;height:auto;min-height:100svh}
+  .process .layer{position:relative;height:70vh;opacity:1}
+  .steps,.step{position:relative!important}
+  .step{opacity:1;transform:none;padding:24px 0}
+  .process .stage::after,.bars{display:none}
+  .process .head{position:relative;padding-top:100px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Giorgia, torna all'inizio"><img src="assets/wordmark.webp" alt="Giorgia" width="178" height="68"></a>
+    <a class="l opt" href="#birre">Le birre</a>
+    <a class="l opt" href="#processo">Come nasce</a>
+    <a class="l opt" href="#pizzeria">Pizzeria</a>
+    <a class="l" href="#fusti">Fusti</a>
+    <a class="btn btn-gold btn-sm" href="menu.html">Menù</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- SCENA 1: il bicchiere che si allarga fino a riempire lo schermo -->
+  <section class="hero" id="hero">
+    <div class="stage">
+      <div class="hero-video" id="heroVideo">
+        <video autoplay muted loop playsinline preload="auto" poster="assets/birra-10-poster.webp" aria-hidden="true" data-src="assets/birra-10"></video>
+      </div>
+      <div class="hero-top" id="heroTop">
+        <h1 class="sr">Giorgia, birrificio artigianale e pizzeria ad Ariano Irpino</h1>
+        <img class="wm" src="assets/wordmark.webp" alt="" width="520" height="198">
+        <p>Birrificio artigianale e pizzeria ad Ariano Irpino, dal 2011.</p>
+        <div class="cta">
+          <a class="btn btn-gold" href="#birre">Scopri le birre</a>
+          <a class="btn btn-line" href="menu.html">Apri il menù</a>
+        </div>
+      </div>
+      <div class="hero-say" id="heroSay">
+        <h2><span style="display:block">Fatta qui.</span><span class="goldtext">Spillata qui.</span></h2>
+        <p>La birra che bevi al tavolo nasce a pochi metri da te, nei nostri fermentatori.</p>
+      </div>
+      <div class="scroll-hint" id="hint">Scorri</div>
+    </div>
+  </section>
+
+  <!-- SCENA 2: manifesto -->
+  <section class="manifesto" id="manifesto" aria-label="Chi siamo">
+    <div class="stage">
+      <p id="manifestoText">Dal 2011 facciamo birra ad Ariano Irpino. Malto, luppolo, acqua, lievito e tempo. Nessuna scorciatoia, nessun viaggio: dal fermentatore alla spina.</p>
+    </div>
+  </section>
+
+  <!-- SCENA 3: dal chicco al bicchiere -->
+  <section class="process" id="processo" aria-labelledby="proc-h">
+    <div class="stage">
+      <div class="layer on"><img src="assets/img/malto-boccale-1600.webp" srcset="assets/img/malto-boccale-900.webp 900w, assets/img/malto-boccale-1600.webp 1600w, assets/img/malto-boccale-2600.webp 2600w" sizes="100vw" alt="Un boccale pieno di malto d'orzo nel birrificio"></div>
+      <div class="layer"><img src="assets/img/sala-cotta-1600.webp" srcset="assets/img/sala-cotta-900.webp 900w, assets/img/sala-cotta-1600.webp 1600w, assets/img/sala-cotta-2600.webp 2600w" sizes="100vw" alt="La sala cotta del birrificio Giorgia" loading="lazy"></div>
+      <div class="layer"><img src="assets/img/fermentatori-1600.webp" srcset="assets/img/fermentatori-900.webp 900w, assets/img/fermentatori-1600.webp 1600w, assets/img/fermentatori-2600.webp 2600w" sizes="100vw" alt="I fermentatori in acciaio" loading="lazy"></div>
+      <div class="layer"><img src="assets/img/ipa-1600.webp" srcset="assets/img/ipa-900.webp 900w, assets/img/ipa-1600.webp 1600w, assets/img/ipa-2600.webp 2600w" sizes="100vw" alt="Un calice di Genesis appena spillata" loading="lazy"></div>
+      <div class="head"><h2 id="proc-h">Dal chicco al bicchiere.</h2></div>
+      <div class="steps">
+        <div class="step on"><div class="n">1 di 4</div><h3>Il malto.</h3><p>Tutto parte dall'orzo maltato: chiaro per le bionde, tostato per le ambrate. Lo scegliamo ricetta per ricetta.</p></div>
+        <div class="step"><div class="n">2 di 4</div><h3>La cotta.</h3><p>Nella sala cotta il malto incontra l'acqua calda e il luppolo. Tempi e temperature fanno la differenza tra una birra e l'altra.</p></div>
+        <div class="step"><div class="n">3 di 4</div><h3>La fermentazione.</h3><p>Il mosto passa nei fermentatori e il lievito si mette al lavoro. È qui che ogni birra trova il suo carattere.</p></div>
+        <div class="step"><div class="n">4 di 4</div><h3>Il bicchiere.</h3><p>Dal fermentatore al fusto, dal fusto alla spina. Pochi metri, per questo da noi la trovi così fresca.</p></div>
+      </div>
+      <div class="bars" aria-hidden="true"><div class="wrap"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div></div>
+    </div>
+  </section>
+
+  <!-- LE BIRRE -->
+  <section class="sec beers" id="birre" aria-labelledby="birre-h">
+    <div class="sec-head">
+      <h2 id="birre-h">Quattro birre.<br>Un solo birrificio.</h2>
+      <p>Tutte prodotte nel nostro impianto. Non sai quale scegliere? Chiedi un assaggio al banco.</p>
+    </div>
+    <div class="wrap" style="padding:0">
+      <div class="rail" id="rail"></div>
+    </div>
+  </section>
+
+  <!-- PIZZERIA -->
+  <section class="sec" id="pizzeria" aria-labelledby="pizza-h" style="padding-top:40px">
+    <div class="sec-head">
+      <h2 id="pizza-h">E per accompagnarla, la pizza.</h2>
+      <p>Pizze rosse e bianche, pinse romane, panuozzi, fagotti e fritti. Su richiesta ogni pizza si cuoce anche in padellino.</p>
+    </div>
+    <div class="wrap bento">
+      <article class="tile t-a" data-zoom>
+        <img src="assets/img/pizza-forno-1600.webp" srcset="assets/img/pizza-forno-900.webp 900w, assets/img/pizza-forno-1600.webp 1600w, assets/img/pizza-forno-2600.webp 2600w" sizes="100vw" alt="Una pizza appena sfornata davanti al forno a legna" loading="lazy">
+        <div class="txt">
+          <h3>Oltre 70 pizze.</h3>
+          <p>Dalla Marinara alla Montanara con porcini e olio al tartufo, fino alle novità della stagione.</p>
+          <a class="btn btn-gold btn-sm" href="menu.html#rosse">Guarda le pizze</a>
+        </div>
+      </article>
+      <article class="tile t-b" data-zoom>
+        <img src="assets/img/pizza-stella-1600.webp" srcset="assets/img/pizza-stella-900.webp 900w, assets/img/pizza-stella-1600.webp 1600w, assets/img/pizza-stella-2600.webp 2600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Pizza a forma di stella con prosciutto e rucola" loading="lazy">
+        <div class="txt">
+          <h3>La tua pizza d'autore.</h3>
+          <p>Scegli due gusti e una forma tra otto: stella, cuoppo, girandola, cannolo e altre. 13 €.</p>
+          <a class="link" href="menu.html#autore">Come funziona</a>
+        </div>
+      </article>
+      <article class="tile t-c" data-zoom>
+        <img src="assets/img/panuozzo-1600.webp" srcset="assets/img/panuozzo-900.webp 900w, assets/img/panuozzo-1600.webp 1600w, assets/img/panuozzo-2600.webp 2600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Panuozzo con hamburger e patatine" loading="lazy">
+        <div class="txt">
+          <h3>Panuozzi e fritti.</h3>
+          <p>Per la serata con gli amici, da dividere o da tenere tutto per te.</p>
+          <a class="link" href="menu.html#panuozzi">Vedi il menù</a>
+        </div>
+      </article>
+      <article class="tile t-d" data-zoom>
+        <img src="assets/img/bancone-1600.webp" srcset="assets/img/bancone-900.webp 900w, assets/img/bancone-1600.webp 1600w, assets/img/bancone-2346.webp 2346w" sizes="100vw" alt="Un calice di birra Giorgia sul bancone" loading="lazy" style="object-position:70% 50%">
+        <div class="txt">
+          <h3>Il giusto abbinamento.</h3>
+          <p>Ogni birra ha le sue pizze. Ecco da dove partire.</p>
+          <ul class="pairs" id="pairs"></ul>
+          <a class="btn btn-line btn-sm" href="menu.html">Sfoglia tutto il menù</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SCENA 4: i fusti -->
+  <section class="kegs" id="fusti" aria-labelledby="fusti-h">
+    <div class="stage">
+      <img src="assets/img/fusti-bn-1600.webp" srcset="assets/img/fusti-bn-900.webp 900w, assets/img/fusti-bn-1600.webp 1600w, assets/img/fusti-bn-2000.webp 2000w" sizes="100vw" alt="Fusti di birra visti dall'alto" loading="lazy">
+      <div class="say">
+        <div>
+          <h2 id="fusti-h">La nostra birra,<br><span class="goldtext">alla tua festa.</span></h2>
+          <p>Non imbottigliamo: la nostra birra viaggia in fusto. Da noi alla spina, da te per ogni occasione.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0" aria-label="Fusti per privati, eventi e locali">
+    <div class="wrap">
+      <div class="offer">
+        <article class="card">
+          <div class="ph"><img src="assets/img/fusto-calice-1600.webp" srcset="assets/img/fusto-calice-900.webp 900w, assets/img/fusto-calice-1600.webp 1600w, assets/img/fusto-calice-2000.webp 2000w" sizes="(max-width: 900px) 100vw, 50vw" alt="Un fusto con spillatore e un calice di birra" loading="lazy"></div>
+          <div class="bd"><h3>Per le tue feste</h3><p>Compleanni, lauree, matrimoni. Scegli la birra, ti diciamo quanta ne serve per i tuoi ospiti.</p></div>
+        </article>
+        <article class="card">
+          <div class="ph"><img src="assets/img/fusti-rame-1600.webp" srcset="assets/img/fusti-rame-900.webp 900w, assets/img/fusti-rame-1600.webp 1600w, assets/img/fusti-rame-2600.webp 2600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Fusti pronti per un evento" loading="lazy"></div>
+          <div class="bd"><h3>Per sagre ed eventi</h3><p>Forniture per associazioni, feste di paese ed eventi, con spillatura su richiesta.</p></div>
+        </article>
+        <article class="card">
+          <div class="ph"><img src="assets/img/fermentatori-2-1600.webp" srcset="assets/img/fermentatori-2-900.webp 900w, assets/img/fermentatori-2-1600.webp 1600w, assets/img/fermentatori-2-2600.webp 2600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Fermentatori del birrificio" loading="lazy"></div>
+          <div class="bd"><h3>Per bar e ristoranti</h3><p>Una birra artigianale irpina alla spina nel tuo locale. Parliamone.</p></div>
+        </article>
+      </div>
+      <div class="quote">
+        <video autoplay muted loop playsinline preload="none" poster="assets/birra-9-poster.webp" aria-hidden="true" data-src="assets/birra-9"></video>
+        <div class="in">
+          <h3>Quanta birra ti serve?</h3>
+          <p>Scrivici la data, il numero di ospiti e la birra che preferisci. Ti rispondiamo con un preventivo.</p>
+          <a class="btn btn-gold" id="waKegs" href="#" target="_blank" rel="noopener">Chiedi un preventivo su WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIENI A TROVARCI -->
+  <section class="sec" id="visita" aria-labelledby="visita-h" style="padding-top:0">
+    <div class="wrap visit">
+      <div class="big" data-zoom><img src="assets/img/sala-cotta-2-1600.webp" srcset="assets/img/sala-cotta-2-900.webp 900w, assets/img/sala-cotta-2-1600.webp 1600w, assets/img/sala-cotta-2-2600.webp 2600w" sizes="100vw" alt="L'interno del birrificio Giorgia" loading="lazy"></div>
+      <div class="side">
+        <img class="logo" src="assets/logo-chiaro.webp" alt="Logo Birrificio artigianale Giorgia, Ariano Irpino, since 2011" loading="lazy">
+        <h3 id="visita-h">Vieni a trovarci.</h3>
+        <!-- Se non fate visite al birrificio, cancella la frase qui sotto -->
+        <p>Birra e pizza ad Ariano Irpino. Vuoi vedere dove nasce la tua birra? Chiedici quando passare.</p>
+        <div class="row">
+          <a class="btn btn-gold" id="telBtn" href="#">Chiama per prenotare</a>
+          <a class="btn btn-line" id="mapBtn" href="#" target="_blank" rel="noopener">Indicazioni</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div><img class="logo" src="assets/logo-chiaro.webp" alt="Giorgia" loading="lazy"></div>
+      <div><h4>Il birrificio</h4><p><a href="#birre">Le birre</a></p><p><a href="#processo">Come nasce</a></p><p><a href="#fusti">Fusti per eventi</a></p></div>
+      <div><h4>La pizzeria</h4><p><a href="menu.html">Menù</a></p><p><a href="menu.html#autore">Pizza d'autore</a></p><p><a href="menu.html#pinse">Pinse romane</a></p></div>
+      <div><h4>Contatti</h4><p id="fTel"></p><p><a id="fIg" href="#" target="_blank" rel="noopener">Instagram</a></p><p><a id="fTt" href="#" target="_blank" rel="noopener">TikTok</a></p><p id="fFb"></p></div>
+    </div>
+    <p class="legal">Birrificio artigianale Giorgia, Ariano Irpino (AV), dal 2011. Bevi responsabilmente.</p>
+  </div>
+</footer>
+
+<a class="wa" id="waFab" href="#" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.5-.3Z"/></svg>
+</a>
+
+<script src="menu-data.js"></script>
+<script>
+/* ---------- video: versione leggera su smartphone, alta risoluzione su schermi grandi ---------- */
+const bigScreen = Math.max(screen.width, screen.height) * (devicePixelRatio || 1) > 1400 && innerWidth > 820;
+document.querySelectorAll("video[data-src]").forEach(v => {
+  v.src = v.dataset.src + (bigScreen ? ".mp4" : "-sm.mp4");
+  v.muted = true; v.play && v.play().catch(() => {});
+});
+
+/* ---------- contenuti generati dai dati ---------- */
+const wa = t => `https://wa.me/${CONTATTI.whatsapp}?text=${encodeURIComponent(t)}`;
+document.getElementById("waKegs").href = wa("Ciao! Vorrei un preventivo per un fusto di birra Giorgia. Data: … Ospiti: … Birra: …");
+document.getElementById("waFab").href = wa("Ciao!");
+document.getElementById("telBtn").href = "tel:" + CONTATTI.telefono;
+document.getElementById("mapBtn").href = CONTATTI.maps;
+document.getElementById("fTel").innerHTML = `<a href="tel:${CONTATTI.telefono}">${CONTATTI.telefonoVisibile}</a>`;
+document.getElementById("fIg").href = CONTATTI.instagram;
+document.getElementById("fTt").href = CONTATTI.tiktok;
+if (CONTATTI.facebook) document.getElementById("fFb").innerHTML = `<a href="${CONTATTI.facebook}" target="_blank" rel="noopener">Facebook</a>`;
+
+document.getElementById("rail").innerHTML = BEERS.map((b, i) => `
+  <article class="beer" style="--c:${b.beer}">
+    <div class="g">${glassSVG(b.beer, "h" + i)}</div>
+    <h3>${esc(b.name)}</h3>
+    <p class="style">${esc(b.style)}</p>
+    <p class="short">${esc(b.short)}</p>
+    <div class="abv">
+      <div><b>${esc(b.abv)}%</b><span>alcol vol.</span></div>
+      <div><b>${b.prices.length ? esc(b.prices[0][1]) + " €" : "–"}</b><span>${b.prices.length ? "la piccola" : "alla spina"}</span></div>
+    </div>
+    <p class="pair">Provala con <strong>${esc(b.pair)}</strong></p>
+    <p class="pair" style="margin-top:-10px;font-size:.8rem">Allergeni: contiene glutine (orzo)</p>
+    <div class="foot">${b.prices.length ? `
+      <details><summary><span class="btn btn-line btn-sm">Formati e prezzi</span></summary>
+        <div class="prices">${b.prices.map(p => `<div><span>${esc(p[0])}</span><span>${esc(p[1])} €</span></div>`).join("")}</div>
+      </details>` : `<p class="ask">Chiedi al banco se è alla spina oggi.</p>`}
+    </div>
+  </article>`).join("");
+
+document.getElementById("pairs").innerHTML = BEERS.map(b =>
+  `<li><b>${esc(b.name)}</b><span>${esc(b.pair)}</span></li>`).join("");
+
+// il manifesto diviso in parole
+const mt = document.getElementById("manifestoText");
+mt.innerHTML = mt.textContent.split(" ").map(w => `<span class="w">${w}</span>`).join(" ");
+const words = [...mt.querySelectorAll(".w")];
+
+/* ---------- motore delle scene di scorrimento ---------- */
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const map = (v, a, b) => clamp((v - a) / (b - a));
+const ease = t => 1 - Math.pow(1 - t, 3);
+// avanzamento 0→1 di una sezione "appiccicosa"
+const pin = el => { const r = el.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); };
+// avanzamento 0→1 di un elemento che entra nello schermo
+const enter = (el, span = .9) => { const r = el.getBoundingClientRect(); return clamp((innerHeight - r.top) / (innerHeight * span)); };
+
+const hero = document.getElementById("hero"), hv = document.getElementById("heroVideo"),
+      htop = document.getElementById("heroTop"), say = document.getElementById("heroSay"), hint = document.getElementById("hint");
+const man = document.getElementById("manifesto");
+const proc = document.getElementById("processo"), layers = [...proc.querySelectorAll(".layer")],
+      steps = [...proc.querySelectorAll(".step")], bars = [...proc.querySelectorAll(".bars b")];
+const rail = document.getElementById("rail");
+const kegs = document.getElementById("fusti"), kegStage = kegs.querySelector(".stage");
+const zooms = [...document.querySelectorAll("[data-zoom]")];
+
+let topH = 0;
+function measure() { topH = htop.offsetTop + htop.offsetHeight + 28; }
+
+function frame() {
+  const vw = innerWidth, vh = innerHeight;
+
+  // scena 1: il riquadro video si allarga fino a tutto schermo
+  const p = pin(hero);
+  const g = ease(map(p, 0, .55));
+  const side = (vw < 700 ? 16 : Math.max(22, (vw - 980) / 2)) * (1 - g);
+  const t = topH * (1 - g), b = (vw < 700 ? 16 : 40) * (1 - g), r = 30 * (1 - g);
+  hv.style.clipPath = `inset(${t}px ${side}px ${b}px ${side}px round ${r}px)`;
+  hv.style.setProperty("--vs", 1.12 - .12 * g);
+  hv.style.setProperty("--shade", map(p, .45, .7));
+  const f = map(p, 0, .3);
+  htop.style.opacity = 1 - f;
+  htop.style.transform = `translateY(${-60 * f}px) scale(${1 - .06 * f})`;
+  const s = map(p, .5, .75), out = map(p, .9, 1);
+  say.style.opacity = s * (1 - out);
+  say.style.transform = `translateY(${40 * (1 - s)}px)`;
+  hint.style.setProperty("--hint", 1 - map(p, 0, .08));
+
+  // scena 2: le parole si accendono
+  const m = pin(man);
+  const lit = Math.round(map(m, .08, .8) * words.length);
+  words.forEach((w, i) => w.classList.toggle("on", i < lit));
+
+  // scena 3: il processo in 4 passi
+  const q = pin(proc), n = layers.length;
+  const idx = Math.min(n - 1, Math.floor(q * n));
+  layers.forEach((l, i) => {
+    l.classList.toggle("on", i === idx);
+    const local = clamp(q * n - i);
+    l.querySelector("img").style.setProperty("--s", 1.18 - .18 * local);
+  });
+  steps.forEach((s, i) => s.classList.toggle("on", i === idx));
+  bars.forEach((bar, i) => bar.style.setProperty("--f", clamp(q * n - i)));
+
+  // le birre arrivano in prospettiva
+  rail.style.setProperty("--t", 1 - ease(enter(rail, .75)));
+
+  // scena 4: i fusti, lo zoom all'indietro
+  const k = pin(kegs);
+  kegStage.style.setProperty("--k", 1.5 - .5 * ease(map(k, 0, .7)));
+  kegStage.style.setProperty("--b", .55 - .25 * map(k, .2, .6));
+  kegStage.style.setProperty("--o", ease(map(k, .15, .5)));
+  kegStage.style.setProperty("--o2", map(k, .4, .6));
+
+  // foto che si "avvicinano" mentre entrano
+  zooms.forEach(z => z.style.setProperty("--z", 1.14 - .14 * ease(enter(z, 1.1))));
+}
+
+let ticking = false;
+function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(() => { frame(); ticking = false; }); } }
+
+if (reduce) {
+  words.forEach(w => w.classList.add("on"));
+  rail.style.setProperty("--t", 0);
+  say.style.opacity = 1; say.style.position = "relative"; say.style.bottom = "auto"; say.style.padding = "40px 22px";
+  kegStage.style.setProperty("--k", 1); kegStage.style.setProperty("--o", 1); kegStage.style.setProperty("--o2", 1);
+  hv.style.clipPath = "none";
+  document.querySelectorAll(".process .layer img").forEach(i => i.style.setProperty("--s", 1));
+  zooms.forEach(z => z.style.setProperty("--z", 1));
+  // senza animazioni il processo diventa una sequenza di immagini
+  proc.querySelectorAll(".layer,.step").forEach(e => e.classList.add("on"));
+} else {
+  measure(); frame();
+  addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", () => { measure(); frame(); });
+}
+</script>
+</body>
+</html>

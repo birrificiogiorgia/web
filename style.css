@@ -1,0 +1,75 @@
+/* =====================================================================
+   Giorgia – stile condiviso (home + menù)
+   ===================================================================== */
+:root{
+  --stout:#120D09;      /* fondo: il colore di una stout */
+  --malt:#1C1510;       /* superfici */
+  --malt-2:#271D16;
+  --line:rgba(244,235,220,.12);
+  --cream:#F4EBDC;      /* testo, lo stesso crema del logo */
+  --muted:#A99B87;
+  --gold-1:#B98A4E; --gold-2:#F1D48A; --gold-3:#C99A57;
+  --gold:linear-gradient(100deg,var(--gold-1) 0%,var(--gold-2) 45%,var(--gold-3) 100%);
+  --amber:#E0A032;
+  --font:"Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --r-lg:30px; --r-md:20px;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--stout);color:var(--cream);font-family:var(--font);font-size:17px;line-height:1.5;
+  font-optical-sizing:auto;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- navigazione ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);
+  background:rgba(18,13,9,.72);backdrop-filter:saturate(160%) blur(18px);-webkit-backdrop-filter:saturate(160%) blur(18px);
+  border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:26px;height:56px}
+.nav .mark{display:block;height:34px;margin-right:auto}
+.nav .mark img{height:100%;width:auto}
+.nav a.l{font-size:.9rem;text-decoration:none;color:rgba(244,235,220,.78)}
+.nav a.l:hover{color:var(--cream)}
+@media (max-width:720px){.nav a.l.opt{display:none}.nav .wrap{gap:16px}}
+
+/* ---------- bottoni ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font:600 1rem/1 var(--font);
+  text-decoration:none;border:0;cursor:pointer;transition:transform .2s ease, background .2s ease}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);color:#23180B}
+.btn-gold:hover{filter:brightness(1.07)}
+.btn-line{background:rgba(244,235,220,.08);color:var(--cream);box-shadow:inset 0 0 0 1px rgba(244,235,220,.35)}
+.btn-line:hover{background:rgba(244,235,220,.16)}
+.btn-sm{padding:8px 15px;font-size:.88rem}
+.link{color:var(--gold-2);text-decoration:none;font-weight:500}
+.link:hover{text-decoration:underline}
+
+/* testo dorato, usato solo per i titoli principali */
+.goldtext{background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- bicchiere ---------- */
+.glass-svg{width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.glass-svg .bub{animation:rise linear infinite}
+@keyframes rise{from{transform:translateY(0);opacity:0}15%{opacity:1}to{transform:translateY(-150px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.glass-svg .bub{animation:none;opacity:0}}
+
+/* ---------- piè di pagina ---------- */
+.footer{background:var(--stout);border-top:1px solid var(--line);padding:64px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:.92rem;color:var(--muted)}
+.footer .grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+@media (max-width:800px){.footer .grid{grid-template-columns:1fr 1fr}}
+.footer img.logo{width:150px;height:auto}
+.footer h4{color:var(--cream);font-size:.95rem;margin:0 0 10px;font-weight:600}
+.footer p{margin:0 0 6px}
+.footer a{text-decoration:none;color:var(--muted)}
+.footer a:hover{color:var(--cream)}
+.footer .legal{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:.8rem}
+
+/* pulsante WhatsApp fisso su smartphone */
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:56px;height:56px;border-radius:50%;
+  background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.wa svg{width:30px;height:30px}
+@media (min-width:900px){.wa{display:none}}
