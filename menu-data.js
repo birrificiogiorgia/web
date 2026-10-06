@@ -29,15 +29,15 @@ const BEERS = [
     prices:[["Piccola","4,00"],["Media","5,00"],["Grande","6,00"],["Boccale da litro","11,00"],["Caraffa","15,50"]] },
   { name:"Hirpus", style:"Weizenbock, alta fermentazione", abv:"6,8", beer:"#D9922E", a:[1],
     text:"Weizenbock con il 70% di frumento e una gradazione moderatamente elevata, prodotta seguendo l'antica ricetta. Profumata e gustosa, resta fresca e beverina; lasciata stemperare nel bicchiere sviluppa note speziate avvolgenti.",
-    short:"Profumata, piena, beverina.", pair:"Tedesca, Speck e noci, Porchetta",
+    short:"Profumata, piena, beverina.", pair:"Patate lesse, Speck e noci, Gustosa",
     prices:[["Piccola","5,00"],["Media","6,00"],["Grande","7,00"],["Boccale da litro","12,00"],["Caraffa","18,00"]] },
   { name:"Jessica", style:"Bock Dunkel, alta fermentazione", abv:"6,5", beer:"#8A3B14", a:[1],
     text:"Ambrata, ricca e maltata, bilanciata da un tocco di luppolo. Perfetta con le pizze più saporite.",
-    short:"Ambrata, rotonda, maltata.", pair:"Ai porcini, Montanara, Porchetta",
+    short:"Ambrata, rotonda, maltata.", pair:"Ai porcini, Montanara, Dolce e Salato",
     prices:[["Piccola","4,00"],["Media","5,00"],["Grande","6,00"],["Boccale da litro","11,00"],["Caraffa","15,50"]] },
   { name:"Genesis", style:"American IPA, alta fermentazione", abv:"6,5", beer:"#D98A1F", a:[1],
     text:"Carattere deciso e profilo aromatico intenso, grazie a una luppolatura abbondante.",
-    short:"Aromatica e decisa.", pair:"Diavola, Esplosiva, Messicana",
+    short:"Aromatica, intensa e decisa.", pair:"Porchetta, Esplosiva, Messicana",
     prices:[["Piccola","5,00"],["Media","6,00"],["Grande","7,00"],["Boccale da litro","12,00"],["Caraffa","18,00"]] }
 ];
 
