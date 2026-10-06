@@ -23,10 +23,14 @@ const BEERS = [
     text:"Bionda di facile bevuta, gusto delicato con un amaro leggero. Quella che va bene con tutto.",
     short:"La bionda per ogni occasione.", pair:"Margherita, Capricciosa, fritti",
     prices:[["Piccola","3,00"],["Media","4,00"],["Grande","5,00"],["Boccale da litro","8,00"],["Caraffa","12,00"]] },
-  { name:"Aurora", style:"Pilsner, bassa fermentazione", abv:"5,5", beer:"#F2CC4E", a:[1],
-    text:"Bionda con luppolatura generosa e un amaro deciso. Per chi ama le birre secche e pulite.",
-    short:"Secca, luppolata, dissetante.", pair:"Napoli, Romana, Tonno e cipolla",
-    prices:[] },
+  { name:"Margot", style:"Blanche belga, alta fermentazione", abv:"4,5", beer:"#F1DA8C", a:[1],
+    text:"Blanche in stile belga, speziata con coriandolo e buccia d'arancia amara. Il 30% di frumento e un sistema innovativo di utilizzo delle spezie la rendono fresca e dissetante.",
+    short:"Speziata e dissetante.", pair:"Alici e limone, Valtellina, Mediterranea",
+    prices:[["Piccola","4,00"],["Media","5,00"],["Grande","6,00"],["Boccale da litro","11,00"],["Caraffa","15,50"]] },
+  { name:"Greta", style:"Weizenbock, alta fermentazione", abv:"6,8", beer:"#D9922E", a:[1],
+    text:"Weizenbock con il 70% di frumento e una gradazione moderatamente elevata, prodotta seguendo l'antica ricetta. Profumata e gustosa, resta fresca e beverina; lasciata stemperare nel bicchiere sviluppa note speziate avvolgenti.",
+    short:"Profumata, piena, beverina.", pair:"Tedesca, Speck e noci, Porchetta",
+    prices:[["Piccola","5,00"],["Media","6,00"],["Grande","7,00"],["Boccale da litro","12,00"],["Caraffa","18,00"]] },
   { name:"Jessica", style:"Bock Dunkel, alta fermentazione", abv:"6,5", beer:"#8A3B14", a:[1],
     text:"Ambrata, ricca e maltata, bilanciata da un tocco di luppolo. Perfetta con le pizze più saporite.",
     short:"Ambrata, rotonda, maltata.", pair:"Ai porcini, Montanara, Porchetta",
@@ -259,7 +263,7 @@ function glassSVG(color, id, bubbles = true) {
     <path d="M40 76 C56 70 68 80 82 74 C96 68 110 78 124 72 C138 66 150 74 160 70 V92 C148 98 136 90 122 96 C108 102 94 92 80 98 C66 104 52 94 40 100 Z" fill="#F4E6CC" opacity=".9"/>
   </g>
   <path d="M52 40 C46 95 40 140 62 190 C74 214 88 226 92 238 L108 238 C112 226 126 214 138 190 C160 140 154 95 148 40" fill="url(#gl${id})" stroke="rgba(255,255,255,.55)" stroke-width="1.6"/>
-  <path d="M96 238 V276 M70 282 C84 276 116 276 130 282" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M100 238 V276 M70 282 C84 276 116 276 130 282" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/>
   <ellipse cx="46" cy="36" rx="0" ry="0"/>
 </svg>`;
 }
