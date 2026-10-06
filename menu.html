@@ -31,7 +31,7 @@ body{padding-top:calc(env(safe-area-inset-top,0px) + 56px)}
 .tapc .pr span{color:var(--muted);font-size:.72rem}
 .tapc .pr b{font-weight:600;font-variant-numeric:tabular-nums}
 .tapc .ask{grid-column:1/-1;margin-top:10px;border-top:1px solid var(--line);padding-top:10px;color:var(--muted);font-size:.88rem}
-@media (min-width:1000px){.taps{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible}.tapc{flex:auto}}
+@media (min-width:1000px){.taps{flex-wrap:wrap;justify-content:center;overflow:visible}.tapc{flex:0 0 calc((100% - 24px) / 3)}}
 
 /* barra ricerca + categorie */
 .bar{position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px);z-index:30;background:rgba(18,13,9,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:10px 0 0}
