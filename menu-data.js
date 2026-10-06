@@ -27,7 +27,7 @@ const BEERS = [
     text:"Blanche in stile belga, speziata con coriandolo e buccia d'arancia amara. Il 30% di frumento e un sistema innovativo di utilizzo delle spezie la rendono fresca e dissetante.",
     short:"Speziata e dissetante.", pair:"Alici e limone, Valtellina, Mediterranea",
     prices:[["Piccola","4,00"],["Media","5,00"],["Grande","6,00"],["Boccale da litro","11,00"],["Caraffa","15,50"]] },
-  { name:"Greta", style:"Weizenbock, alta fermentazione", abv:"6,8", beer:"#D9922E", a:[1],
+  { name:"Hirpus", style:"Weizenbock, alta fermentazione", abv:"6,8", beer:"#D9922E", a:[1],
     text:"Weizenbock con il 70% di frumento e una gradazione moderatamente elevata, prodotta seguendo l'antica ricetta. Profumata e gustosa, resta fresca e beverina; lasciata stemperare nel bicchiere sviluppa note speziate avvolgenti.",
     short:"Profumata, piena, beverina.", pair:"Tedesca, Speck e noci, Porchetta",
     prices:[["Piccola","5,00"],["Media","6,00"],["Grande","7,00"],["Boccale da litro","12,00"],["Caraffa","18,00"]] },
